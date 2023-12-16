@@ -1,0 +1,346 @@
+print("heloo")
+#
+# a = 10
+# print(a)
+# print(id(a))
+# print(type(a))
+#
+# b = True
+# print(type(b))
+# print(id(b))
+#
+# c = 0b1111
+# print(c)
+# d = 0B1111111
+# print(d)
+#
+# e = 0o1236
+# print(e)
+#
+# g = 0xface
+# print(g)
+#
+# x= 10+20j
+# y=20+30j
+# print(x/y)
+#
+# print(True+ True)
+# print(True - True)
+# print(True+ False)
+#
+# print(True - False)
+#
+# s='ravi'
+# print(type(s))
+#
+# q="ravi"
+# print(type(q))
+#
+# i='e'
+# print(type(i))
+# x = """ durga
+#    soft
+#    solution"""
+# print(x)
+#
+# r = 'ravikondajji'
+#
+# print(r[0].upper()+r[1:])
+#
+#
+# v = 'kondajji'
+# output = v[0:len(v)-1]+v[-1].upper()
+# print(output)
+#
+# j= 'bapuji'
+# output = j[0].upper()+j[1:len(j)-1]+j[-1].upper()
+# print(output)
+#
+# # j1 = 'durga'+10
+# # print(j1)
+#
+# print(int(40.255))
+#
+#
+# k = str('10')
+# print(k)
+#
+# str1 = "Hello"
+# str2 = "JavaTpoint"
+
+# join() method is used to combine the strings
+# print(" ".join([str1, str2]))
+
+# join() method is used to combine
+# the string with a separator Space(" ")
+# str3 = " ".join([str1, str2])
+#
+# print(str3)
+
+def pow(A, B):
+   if B == 0:
+      return 1
+   if B % 2 == 0:
+      return pow(A, B // 2) * pow(A, B // 2)
+
+   return A * pow(A, B // 2) * pow(A, B // 2)
+
+
+# Function for calculating "order of the number"
+def order_1(A):
+   # Variable for storing the number
+   N = 0
+   while (A != 0):
+      N = N + 1
+      A = A // 10
+
+   return N
+
+
+# Function for checking if the given number is Armstrong number or not
+def is_Armstrong(A):
+   N = order_1(A)
+   temp_1 = A
+   sum_1 = 0
+
+   while (temp_1 != 0):
+      R_1 = temp_1 % 10
+      sum_1 = sum_1 + pow(R_1, N)
+      temp_1 = temp_1 // 10
+
+      # If the above condition is satisfied, it will return the result
+   return (sum_1 == A)
+
+
+# Driver code
+A = int(input("Please enter the number to be checked: "))
+print(is_Armstrong(A))
+
+--------------------------------------------------------------------------------------------------
+# str = "ravikondajji is good"
+# print(str)
+#
+# rev_str = ""
+# count = len(str)
+# while count > 0:
+#     rev_str += str[count-1]
+#     count = count-1
+# print(rev_str)
+
+# def reverse(str):
+#     if len(str) == 0:  # Checking the lenght of string
+#         return str
+#     else:
+#         return reverse(str[1:]) + str[0]
+#
+#
+# str = "Devansh Sharma"
+# print("The original string  is : ", str)
+# print("The reversed string(using recursion) is : ", reverse(str))
+
+# a_list = ["Python", "Convert", "125", "String", "Method"]
+#
+# # Converting to string
+# string = " ".join(a_list)  # this is read as join elements of a_list with a separator (" ")
+#
+# # Printing the string
+# print(string)
+# print(type(string))
+
+
+# Creating a bubble sort function
+# def bubble_sort(list1):
+#     # Outer loop for traverse the entire list
+#     for i in range(0, len(list1) - 1):
+#         for j in range(len(list1) - 1):
+#             if list1[j] > list1[j + 1]:
+#                 temp = list1[j]
+#                 list1[j] = list1[j + 1]
+#                 list1[j + 1] = temp
+#     return list1
+#
+#
+# list1 = [5, 3, 8, 6, 7, 2]
+# print("The unsorted list is: ", list1)
+# # Calling the bubble sort function
+# print("The sorted list is: ", bubble_sort(list1))
+
+# string = input("Enter a string:")
+# if string == string[::-1]:
+#       print("The letter is a palindrome")
+# else:
+#       print("The letter is not a palindrome")
+
+
+
+# # Ask for enter the number from the use
+# number = int(input("Enter the integer number: "))
+#
+# # Initiate value to null
+# revs_number = 0
+#
+# # reverse the integer number using the while loop
+#
+# while (number > 0):
+#
+#       remainder = number % 10
+#       revs_number = (revs_number * 10) + remainder
+#       number = number // 10
+#
+# # Display the result
+# # print("The reverse number is : {}".format(revs_number))
+# print(revs_number)
+
+
+
+
+# n = int(input ("Enter the number you want to print: "))
+# # Take input from user that how many numbers you want to print
+# a = 0
+# b = 1
+# for i in range(0,n):
+#     print(a)             # a:0;    a:1;       a:2
+#     c = a+b                     #c=0+1=1; c= 1+1=2;  c=1+2=3
+#     a = b               #a=1    ; a=1;       a=2
+#     b = c
+
+
+
+num = int(input("Enter a sum of  number: "))
+
+if num < 0:
+      print("Enter a positive number")
+else:
+      sum = 0
+      # use while loop to iterate un till zero
+      while (num > 0):
+            sum += num
+            num -= 1
+      print("The sum is", sum)
+
+------------------------------------------------------------------------------------
+# a = bin(15)
+# print(a)
+#
+# print(bin(0o123))
+#
+# print(bin(0xfab))
+
+def sum_of_digits(n):
+ sum = 0
+while n> 0:
+digit = n % 10
+sum += digit
+n = n // 10
+return sum
+
+n = int(input("Enter a sum of  number: "))
+print(sum_of_digits(sum))
+
+
+------------------------------------------------------------------
+# name = input("enter the name :")
+# print("welcome" + name)
+
+#
+# s = [10, 20, 30]
+# print(type(s))
+#
+# t = (10, 20, 30, 40)
+# print(type(t))
+#
+# s1 = {10, 20, 30, 40, 50, 10}
+# s1.add(60)
+# print(s1)
+# s1.remove(20)
+# print(s1)
+#
+# r = range(10)
+# print(r)
+# for x in r:
+#     print(x)
+#
+# print("durgesoft")
+# print("durge\tsoft")
+# print("durge\nsoft")
+
+
+# p = 1
+# if(p>2):
+#     print("yes")
+# else:
+#     print("no")
+
+# def reverse(str):
+#     str = str[::-1]
+#     return str
+#
+#
+# s = "JavaTpoint"
+# print("The original string  is : " + s)
+# print("The reversed string using extended slice operator  is : " + reverse(s))
+
+
+# arr = [2, 5, 3, 1, 9, 6]
+#
+# print("Elements of given array present on even position: ");
+# # Loop through the array by incrementing the value of i by 2
+#
+# # Here, i will start from 1 as first even positioned element is present at position 1.
+# for i in range(1, len(arr), 2):
+#     print(arr[i])
+
+
+# arr = [1, 2, 3, 4, 5]
+# sum = 0
+#
+# # Loop through the array to calculate sum of elements
+# for i in range(0, len(arr)):
+#     sum = sum + arr[i]
+#
+# # print("Sum of all the elements of an array: " + str(sum))
+#
+# print(sum)
+
+
+# Initialize array
+arr = [5, 2, 8, 7, 1, 3, 4]
+temp = 0
+
+# Displaying elements of original array
+print("Elements of original array: ")
+for i in range(0, len(arr)):
+    print(arr[i])
+
+# Sort the array in ascending order
+for i in range(0, len(arr)):
+    for j in range(i + 1, len(arr)):
+        if (arr[i] > arr[j]):
+            temp = arr[i]
+            arr[i] = arr[j]
+            arr[j] = temp
+
+# print()
+
+# Displaying elements of the array after sorting
+
+print("Elements of array sorted in ascending order: ")
+for i in range(0, len(arr)):
+    print(arr[i])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
